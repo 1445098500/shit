@@ -1,0 +1,6 @@
+someone@gmail.com
+bill.gates@microsoft.com
+
+r'^([\w\.]+)@(\w+)\.(\w+)$'
+
+r'^([\w\.]+)@(\w+)\.(\w+)$'
