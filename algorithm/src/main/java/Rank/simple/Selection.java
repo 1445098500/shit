@@ -1,3 +1,5 @@
+package Rank.simple;
+
 public class Selection {
     public static void sort(Comparable[] a){
         for (int i=0;i<=a.length-2;i++){

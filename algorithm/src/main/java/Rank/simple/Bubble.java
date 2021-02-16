@@ -1,3 +1,5 @@
+package Rank.simple;
+
 public class Bubble {
     public static void sort(Comparable[] a){
         for (int i=a.length-1;i>0;i--){

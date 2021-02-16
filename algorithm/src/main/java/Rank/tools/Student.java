@@ -1,3 +1,5 @@
+package Rank.tools;
+
 public class Student implements Comparable<Student>{
     private String name;
     private int age;
@@ -20,7 +22,7 @@ public class Student implements Comparable<Student>{
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Rank.tools.Student{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';

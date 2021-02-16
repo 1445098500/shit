@@ -1,3 +1,7 @@
+package Rank.simple;
+
+import Rank.simple.Bubble;
+
 import java.util.Arrays;
 
 public class BubbleTest {

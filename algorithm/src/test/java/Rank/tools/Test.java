@@ -1,3 +1,7 @@
+package Rank.tools;
+
+import Rank.tools.Student;
+
 public class Test {
     public static void main(String[] args) {
         Student s1 = new Student();

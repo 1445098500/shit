@@ -1,10 +1,13 @@
+package Rank.simple;
+
+import Rank.simple.Insertion;
+
 import java.util.Arrays;
 
-public class SelectionTest {
+public class InsertionTest {
     public static void main(String[] args) {
         Integer[] arr ={9,5,7,8,6,1,4,3,2};
-        Selection.sort(arr);
+        Insertion.sort(arr);
         System.out.println(Arrays.toString(arr));
     }
 }
-
