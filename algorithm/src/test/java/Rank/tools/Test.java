@@ -12,14 +12,15 @@ public class Test {
         s2.setName("rose");
         s2.setAge(20);
 
-        Comparable max = getMax(s1,s2);
+        Comparable max = getMax(s1, s2);
         System.out.println(max);
     }
-    public static Comparable getMax(Comparable c1,Comparable c2){
+
+    public static Comparable getMax(Comparable c1, Comparable c2) {
         int result = c1.compareTo(c2);
-        if (result>=0){
+        if (result >= 0) {
             return c1;
-        }else{
+        } else {
             return c2;
         }
     }
