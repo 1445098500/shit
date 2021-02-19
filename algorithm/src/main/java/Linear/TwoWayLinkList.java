@@ -60,6 +60,7 @@ public class TwoWayLinkList<T> implements Iterable<T> {
         if (i == N) {
             last.next = new Node(t, last, null);
             this.last = last.next;
+            N++;
         } else {
             Node n = head;
             for (int index = 0; index < i; index++) {
@@ -76,7 +77,9 @@ public class TwoWayLinkList<T> implements Iterable<T> {
         if (i == N - 1) {
             T value = last.item;
             last.item = null;
+            last.pre.next = null;
             last = last.pre;
+            N--;
             return value;
         } else {
             Node n = head;
@@ -84,13 +87,12 @@ public class TwoWayLinkList<T> implements Iterable<T> {
                 n = n.next;
             }
             T value = n.next.item;
-            n.next.item = null;
-            n.next = n.next.pre;
-            n.next.next.pre = n.next.next;
+            Node nextNode = n.next.next;
+            nextNode.pre = n;
+            n.next = nextNode;
             N--;
             return value;
         }
-
     }
 
     public int indexOf(T t) {

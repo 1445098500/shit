@@ -5,24 +5,20 @@ public class LinkListTest {
     public static void main(String[] args) {
         LinkList<String> st = new LinkList<String>();
 
-        st.insert("a");
-        st.insert("b");
-        st.insert(1, "1");
+        st.insert("1");
+        st.insert("2");
+        st.insert("3");
+        st.insert("4");
+        st.insert("5");
+        st.insert("6");
+        st.insert("7");
         for (String s :
                 st) {
             System.out.println(s);
         }
-        System.out.println(st.length());
-        st.remove(1);
-        System.out.println(st.get(3));
         System.out.println("-------------------------------------");
-        for (String s :
-                st) {
-            System.out.println(s);
-        }
-        System.out.println(st.length());
-        System.out.println("-------------------------------------");
-        System.out.println(st.indexOf("b"));
+        System.out.println(st.isCircle());
+
 
     }
 

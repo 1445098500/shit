@@ -86,6 +86,74 @@ public class LinkList<T> implements Iterable<T> {
         return -1;
     }
 
+    public void reverse() {
+        if (isEmpty()) {
+            return;
+        }
+
+        reverse(head.next);
+    }
+
+    public Node reverse(Node e) {
+        if (e.next == null) {
+            head.next = e;
+            return e;
+        }
+        Node pre = reverse(e.next);
+        pre.next = e;
+        e.next = null;
+        return e;
+    }
+
+    public T getMid() {
+        Node fast = head;
+        Node slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow.item;
+    }
+
+    public boolean isCircle() {
+        Node fast = head;
+        Node slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Node getEntrance() {
+        Node fast = head;
+        Node slow = head;
+        Node temp = null;
+        int count = 0;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if (fast == slow && count == 0) {
+                temp = head;
+                count = 1;
+                continue;
+            }
+
+            if (temp != null) {
+                temp = temp.next;
+                if (temp == slow) {
+                    break;
+                }
+            }
+
+        }
+        return temp;
+    }
+
     @Override
     public Iterator<T> iterator() {
         return new LIterator();
