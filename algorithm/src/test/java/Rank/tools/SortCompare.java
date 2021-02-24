@@ -13,7 +13,7 @@ public class SortCompare {
     public static void main(String[] args) throws Exception {
         ArrayList<Integer> list = new ArrayList<>();
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(SortCompare.class.getResourceAsStream("reverse_arr.txt")));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(SortCompare.class.getClassLoader().getResourceAsStream("reverse_arr.txt")));
         String line = null;
         while ((line = reader.readLine()) != null) {
             int i = Integer.parseInt(line);
