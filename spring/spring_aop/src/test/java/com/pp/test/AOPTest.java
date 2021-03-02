@@ -15,7 +15,7 @@ public class AOPTest {
     private Target target;
 
     @Test
-    public void test1(){
+    public void test1() {
         target.save();
     }
 }

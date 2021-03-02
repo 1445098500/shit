@@ -17,7 +17,7 @@ public class AnnoTest {
     private Target target;
 
     @Test
-    public void test1(){
+    public void test1() {
         target.save();
     }
 }

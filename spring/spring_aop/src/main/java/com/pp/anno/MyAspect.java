@@ -10,11 +10,11 @@ import org.springframework.stereotype.Component;
 public class MyAspect {
 
     //@Before("execution(* *..*.*(..))")
-    public void before(){
+    public void before() {
         System.out.println("before.....");
     }
 
-    public void afterRunning(){
+    public void afterRunning() {
         System.out.println("after running...");
     }
 
@@ -27,16 +27,17 @@ public class MyAspect {
         return proceed;
     }
 
-    public void afterThrowing(){
+    public void afterThrowing() {
         System.out.println("throwing....");
     }
 
     //@After("execution(* *..*.*(..))")
     @After("MyAspect.pointcut()")
-    public void after(){
+    public void after() {
         System.out.println("after.....");
     }
 
     @Pointcut("execution(* *..*.*(..))")
-    public void pointcut(){}
+    public void pointcut() {
+    }
 }

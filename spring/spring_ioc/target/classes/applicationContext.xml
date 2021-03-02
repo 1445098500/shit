@@ -4,10 +4,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--    <bean id="userDao" class="com.pp.dao.impl.UserDaoImpl" init-method="init" destroy-method="destroy"></bean>-->
-<!--    <bean id="userDao" class="com.pp.factory.StaticFactory" factory-method="getUserDao"></bean>-->
-<!--    <bean id="factory" class="com.pp.factory.DynamicFactory"></bean>-->
-<!--    <bean id="userDao" factory-bean="factory" factory-method="getUserDao"></bean>-->
+    <!--    <bean id="userDao" class="com.pp.dao.impl.UserDaoImpl" init-method="init" destroy-method="destroy"></bean>-->
+    <!--    <bean id="userDao" class="com.pp.factory.StaticFactory" factory-method="getUserDao"></bean>-->
+    <!--    <bean id="factory" class="com.pp.factory.DynamicFactory"></bean>-->
+    <!--    <bean id="userDao" factory-bean="factory" factory-method="getUserDao"></bean>-->
     <!--<bean id="userDao" class="com.pp.dao.impl.UserDaoImpl">
         <property name="userName" value="zhangsan"/>
         <property name="age" value="10"/>
@@ -46,10 +46,10 @@
         <property name="name" value="jerry"/>
         <property name="addr" value="tianjin"/>
     </bean>
-<!--    <bean id="userService" class="com.pp.service.impl.UserServiceImpl">-->
-<!--        <property name="userDao" ref="userDao"></property>-->
-<!--    </bean>-->
-<!--    <bean id="userService" class="com.pp.service.impl.UserServiceImpl" p:userDao-ref="userDao"></bean>-->
+    <!--    <bean id="userService" class="com.pp.service.impl.UserServiceImpl">-->
+    <!--        <property name="userDao" ref="userDao"></property>-->
+    <!--    </bean>-->
+    <!--    <bean id="userService" class="com.pp.service.impl.UserServiceImpl" p:userDao-ref="userDao"></bean>-->
     <bean id="userService" class="com.pp.service.impl.UserServiceImpl">
         <constructor-arg name="userDao" ref="userDao"></constructor-arg>
     </bean>
